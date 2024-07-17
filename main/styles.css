@@ -1,0 +1,403 @@
+:root {
+    --font-size-base: 14px; /* Base font size */
+    --spacing: 0.5rem; /* Base spacing for padding/margins */
+    --header-font-size: 2rem; /* Header font size for desktop */
+    --text-align: center; /* Default text alignment */
+}
+
+html {
+    font-size: var(--font-size-base);
+}
+
+body, html {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Lora', sans-serif;
+    background-color: #DBDBDB;
+}
+
+header, footer, section {
+    padding: var(--spacing);
+    text-align: var(--text-align);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: var(--text-align);
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+button {
+    background-color: transparent;
+    color: black;
+    border: solid;
+    border-color: #fc28a7;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'Lora';
+    font-size: 18px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.inner {
+    max-width: 100%;
+    padding: 3rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+.text-container, .image-container {
+    flex: 1;
+    padding: 20px;
+    font-family: 'Lora';
+    font-size: 25px;
+    text-align: justify;
+}
+
+.text-container2 {
+    flex: 1;
+    padding: 20px;
+    font-family: 'Lora';
+    font-size: 25px;
+    text-align: center;
+}
+
+.image-container .image-wrapper {
+    padding: 10px; /* Creates the gap */
+    background: transparent; /* Border color, set this to whatever border color you want */
+    /*display: inline-block; /* Adjust display as needed, or could be block depending on layout */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block; /* Ensures there are no gaps below the image */
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 30px;
+}
+
+blockquote {
+    margin: 20px;
+    padding: 20px;
+    background-color: transparent;
+    border-left: 5px solid #ccc;
+}
+
+
+
+@media (max-width: 768px) {
+    body, html {
+        padding: 10px; /* Smaller padding for smaller screens */
+    }
+
+    header, footer, section {
+        padding: 0px;
+    }
+
+    #main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .inner {
+        max-width: 100%;
+        padding: 0rem;
+    }
+
+    .text-container, .image-container {
+        order: 1; /* Keep text and image in order */
+        font-size: 14px;
+        text-align: justify;
+        margin-bottom: 0px;
+    }
+
+    .text-container2 {
+        text-align: center; /* Center text for readability on small devices */
+        font-size: 14px;
+        padding: 0px;
+    }
+
+    .container {
+        display: block;
+        flex-direction: column; /* Confirm column layout for smaller screens */
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+        display: block; /* Ensures there are no gaps below the image */
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        border-left: none;
+        border-right: none;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    nav ul {
+        padding-left: 0; /* Reset the default padding */
+        margin: 0; /* Ensure no default margin is affecting the layout */
+        width: 100%; /* Ensures full width */
+        list-style: none; /* Removes bullet points */
+        text-align: center; /* Center aligns the content */
+    }
+    
+    nav li {
+        display: block; /* Stack items vertically */
+        width: 100%; /* Ensures each nav item takes full width */
+        margin: 0 auto; /* Centers the items and removes any side margins */
+        text-align: center; /* Ensures text within the nav items is centered */
+    }
+    
+    button {
+        width: 100%; /* Full width for easier access on touch devices */
+        margin: 10px 0px; /* Adjusted margin for vertical stacking */
+        max-width: 100%; 
+        display: block;
+    }
+
+    blockquote {
+        margin: 0px;
+        padding-right: 10px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        background-color: transparent;
+        border-left: 2px solid #ccc;
+    }
+
+    .banner img {
+        width: 100%; /* Ensures the image takes up the full width of its container */
+        height: auto; /* Maintains the aspect ratio */
+        display: block; /* Ensures there are no extra spaces around the image */
+        max-width: 100%; /* Prevents the image from exceeding the width of the container */
+    }
+
+
+    footer {
+        width: 100%; /* Ensures footer is full width */
+        overflow: hidden; /* Prevents any overflow (like horizontal scroll) */
+    }
+}
+
+@media (max-width: 820px) {
+    body, html {
+        padding: 10px; /* Smaller padding for smaller screens */
+    }
+
+    header, footer, section {
+        padding: 0px;
+    }
+
+    #main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .inner {
+        max-width: 100%;
+        padding: 0rem;
+    }
+
+    .text-container, .image-container {
+        order: 1; /* Keep text and image in order */
+        text-align: justify;
+        margin-bottom: 0px;
+    }
+
+    .text-container2 {
+        text-align: center; /* Center text for readability on small devices */
+        padding: 0px;
+    }
+
+    .container {
+        display: block;
+        flex-direction: column; /* Confirm column layout for smaller screens */
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+        display: block; /* Ensures there are no gaps below the image */
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        border-left: none;
+        border-right: none;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    nav ul {
+        padding-left: 0; /* Reset the default padding */
+        margin: 0; /* Ensure no default margin is affecting the layout */
+        width: 100%; /* Ensures full width */
+        list-style: none; /* Removes bullet points */
+        text-align: center; /* Center aligns the content */
+    }
+    
+    nav li {
+        display: block; /* Stack items vertically */
+        width: 100%; /* Ensures each nav item takes full width */
+        margin: 0 auto; /* Centers the items and removes any side margins */
+        text-align: center; /* Ensures text within the nav items is centered */
+    }
+    
+    button {
+        width: 100%; /* Full width for easier access on touch devices */
+        margin: 10px 0px; /* Adjusted margin for vertical stacking */
+        max-width: 100%; 
+        display: block;
+    }
+
+    blockquote {
+        margin: 0px;
+        padding-right: 10px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        background-color: transparent;
+        border-left: 2px solid #ccc;
+    }
+
+    .banner img {
+        width: 100%; /* Ensures the image takes up the full width of its container */
+        height: auto; /* Maintains the aspect ratio */
+        display: block; /* Ensures there are no extra spaces around the image */
+        max-width: 100%; /* Prevents the image from exceeding the width of the container */
+    }
+
+
+    footer {
+        width: 100%; /* Ensures footer is full width */
+        overflow: hidden; /* Prevents any overflow (like horizontal scroll) */
+    }
+}
+
+@media (max-width: 1024px) {
+    body, html {
+        padding: 10px; /* Smaller padding for smaller screens */
+    }
+
+    header, footer, section {
+        padding: 0px;
+    }
+
+    #main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .inner {
+        max-width: 100%;
+        padding: 0rem;
+    }
+
+    .text-container, .image-container {
+        order: 1; /* Keep text and image in order */
+        font-size: 14px;
+        text-align: justify;
+        margin-bottom: 0px;
+    }
+
+    .text-container2 {
+        text-align: center; /* Center text for readability on small devices */
+        font-size: 14px;
+        padding: 0px;
+    }
+
+    .container {
+        display: block;
+        flex-direction: column; /* Confirm column layout for smaller screens */
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+        display: block; /* Ensures there are no gaps below the image */
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        border-left: none;
+        border-right: none;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    nav ul {
+        padding-left: 0; /* Reset the default padding */
+        margin: 0; /* Ensure no default margin is affecting the layout */
+        width: 100%; /* Ensures full width */
+        list-style: none; /* Removes bullet points */
+        text-align: center; /* Center aligns the content */
+    }
+    
+    nav li {
+        display: block; /* Stack items vertically */
+        width: 100%; /* Ensures each nav item takes full width */
+        margin: 0 auto; /* Centers the items and removes any side margins */
+        text-align: center; /* Ensures text within the nav items is centered */
+    }
+    
+    button {
+        width: 100%; /* Full width for easier access on touch devices */
+        margin: 10px 0px; /* Adjusted margin for vertical stacking */
+        max-width: 100%; 
+        display: block;
+    }
+
+    blockquote {
+        margin: 0px;
+        padding-right: 10px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        background-color: transparent;
+        border-left: 2px solid #ccc;
+    }
+
+    .banner img {
+        width: 100%; /* Ensures the image takes up the full width of its container */
+        height: auto; /* Maintains the aspect ratio */
+        display: block; /* Ensures there are no extra spaces around the image */
+        max-width: 100%; /* Prevents the image from exceeding the width of the container */
+    }
+
+
+    footer {
+        width: 100%; /* Ensures footer is full width */
+        overflow: hidden; /* Prevents any overflow (like horizontal scroll) */
+    }
+}
+

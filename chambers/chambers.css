@@ -1,0 +1,310 @@
+body, html {
+    margin: 20px;
+    padding: 0; /* Padding adjusted for overall consistency */
+    font-family: 'Lora', sans-serif;
+    background-color: #DBDBDB; /* Dark background for contrast */
+    color: black;
+    display: flex;
+    flex-direction: column; /* Ensures vertical stacking */
+    align-items: center; /* Center align all items */
+    min-height: 100vh; /* Ensures the body takes at least the height of the viewport */
+    width: 100%; /* Ensures the body takes full width */
+    overflow-x: hidden;
+}
+
+
+.profile-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 20px auto;
+    max-width: 1200px; /* Limiting maximum width */
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #fc28a7;
+    overflow: hidden;
+}
+
+.profile-column, .image-column {
+    padding: 20px;
+    flex: 1; /* Each column takes half the space */
+    box-sizing: border-box;
+}
+
+.profile-column {
+    text-align: left; /* Text alignment for the profile */
+}
+
+.image-column {
+    text-align: center; /* Centering the image */
+    padding-top: 40px; /* Adjust padding to better frame the image */
+}
+
+.image-column img {
+    width: 100%; /* Responsive image that fits the column */
+    height: auto;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: var(--text-align);
+    width: 100%;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+button {
+    background-color: transparent;
+    color: black;
+    border: solid;
+    border-color: #fc28a7;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'Lora';
+    font-size: 18px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+h1 {
+    color: #fc28a7; /* Pink for emphasis */
+    margin-bottom: 20px;
+    font-family: 'Lora';
+}
+
+p {
+    margin-bottom: 5px; /* Space between paragraphs */
+    font-size: 20px; /* Adjust font size for readability */
+    font-family: 'Lora';
+}
+
+
+@media (max-width: 768px) {
+    body, html {
+        margin: 0; /* No margin to maximize available space */
+        padding: 0; /* No padding at the outermost level to fit content within the viewport */
+        font-family: 'Lora', sans-serif;
+        background-color: #DBDBDB; /* Consistent background color */
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        width: 100%;
+        overflow-x: hidden; /* Prevents horizontal scrolling */
+    }
+
+    h1 {
+        color: #fc28a7; /* Pink for emphasis */
+        margin-bottom: 14px;
+    }
+    
+    p {
+        margin-bottom: 5px; /* Space between paragraphs */
+        font-size: 14px; /* Adjust font size for readability */
+    }
+    
+    .image-column img {
+        max-width: 100%; /* Responsive image that fits the column */
+        height: auto;
+    }
+
+    .profile-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 90%; /* Ensures it doesn't exceed the screen width */
+        max-width: 768px; /* Keeps it contained on larger screens */
+        padding: 10px; /* Padding inside the wrapper to ensure content has space */
+        margin: 20px auto; /* Centers it with vertical margin, but doesn't add horizontal space */
+        box-sizing: border-box; /* Includes padding and border in the element's width */
+        border-radius: 8px;
+        border: 1px solid #fc28a7;
+        overflow: hidden;
+    }
+
+    .profile-column, .image-column {
+        flex: 1;
+        padding: 10px; /* Consistent padding */
+        box-sizing: border-box; /* Includes padding in width calculation */
+    }
+
+
+    nav ul {
+        padding-left: 0; /* Reset the default padding */
+        margin: 0; /* Ensure no default margin is affecting the layout */
+        width: 100%; /* Ensures full width */
+        list-style: none; /* Removes bullet points */
+        text-align: center; /* Center aligns the content */
+    }
+    
+    nav li {
+        display: block; /* Stack items vertically */
+        width: 100%; /* Ensures each nav item takes full width */
+        margin: 0 auto; /* Centers the items and removes any side margins */
+        text-align: center; /* Ensures text within the nav items is centered */
+    }
+    
+    button {
+        width: 100%; /* Full width for easier access on touch devices */
+        margin: 10px 0px; /* Adjusted margin for vertical stacking */
+        max-width: 100%; 
+        display: block;
+    }
+}
+
+@media (max-width:820px) {
+    body, html {
+        margin: 0; /* No margin to maximize available space */
+        padding: 0; /* No padding at the outermost level to fit content within the viewport */
+        font-family: 'Lora', sans-serif;
+        background-color: #DBDBDB; /* Consistent background color */
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        width: 100%;
+        overflow-x: hidden; /* Prevents horizontal scrolling */
+    }
+
+    h1 {
+        color: #fc28a7; /* Pink for emphasis */
+        margin-bottom: 14px;
+    }
+    
+    p {
+        margin-bottom: 5px; /* Space between paragraphs */
+        font-size: 14px; /* Adjust font size for readability */
+    }
+    
+    .image-column img {
+        max-width: 70%; /* Responsive image that fits the column */
+        height: auto;
+    }
+
+    .profile-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 90%; /* Ensures it doesn't exceed the screen width */
+        max-width: 820px; /* Keeps it contained on larger screens */
+        padding: 10px; /* Padding inside the wrapper to ensure content has space */
+        margin: 20px auto; /* Centers it with vertical margin, but doesn't add horizontal space */
+        box-sizing: border-box; /* Includes padding and border in the element's width */
+        border-radius: 8px;
+        border: 1px solid #fc28a7;
+        overflow: hidden;
+    }
+
+    .profile-column, .image-column {
+        flex: 1;
+        padding: 10px; /* Consistent padding */
+        box-sizing: border-box; /* Includes padding in width calculation */
+    }
+
+
+    nav ul {
+        padding-left: 0; /* Reset the default padding */
+        margin: 0; /* Ensure no default margin is affecting the layout */
+        width: 100%; /* Ensures full width */
+        list-style: none; /* Removes bullet points */
+        text-align: center; /* Center aligns the content */
+    }
+    
+    nav li {
+        display: block; /* Stack items vertically */
+        width: 100%; /* Ensures each nav item takes full width */
+        margin: 0 auto; /* Centers the items and removes any side margins */
+        text-align: center; /* Ensures text within the nav items is centered */
+    }
+    
+    button {
+        width: 100%; /* Full width for easier access on touch devices */
+        margin: 10px 0px; /* Adjusted margin for vertical stacking */
+        max-width: 100%; 
+        display: block;
+    }
+}
+
+
+@media (max-width:1024px) {
+    body, html {
+        margin: 0; /* No margin to maximize available space */
+        padding: 0; /* No padding at the outermost level to fit content within the viewport */
+        font-family: 'Lora', sans-serif;
+        background-color: #DBDBDB; /* Consistent background color */
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        width: 100%;
+        overflow-x: hidden; /* Prevents horizontal scrolling */
+    }
+
+    h1 {
+        color: #fc28a7; /* Pink for emphasis */
+        margin-bottom: 14px;
+    }
+    
+    p {
+        margin-bottom: 5px; /* Space between paragraphs */
+        font-size: 14px; /* Adjust font size for readability */
+    }
+    
+    .image-column img {
+        max-width: 70%; /* Responsive image that fits the column */
+        height: auto;
+    }
+
+    .profile-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 90%; /* Ensures it doesn't exceed the screen width */
+        max-width: 1024px; /* Keeps it contained on larger screens */
+        padding: 10px; /* Padding inside the wrapper to ensure content has space */
+        margin: 20px auto; /* Centers it with vertical margin, but doesn't add horizontal space */
+        box-sizing: border-box; /* Includes padding and border in the element's width */
+        border-radius: 8px;
+        border: 1px solid #fc28a7;
+        overflow: hidden;
+    }
+
+    .profile-column, .image-column {
+        flex: 1;
+        padding: 10px; /* Consistent padding */
+        box-sizing: border-box; /* Includes padding in width calculation */
+    }
+
+
+    nav ul {
+        padding-left: 0; /* Reset the default padding */
+        margin: 0; /* Ensure no default margin is affecting the layout */
+        width: 100%; /* Ensures full width */
+        list-style: none; /* Removes bullet points */
+        text-align: center; /* Center aligns the content */
+    }
+    
+    nav li {
+        display: block; /* Stack items vertically */
+        width: 100%; /* Ensures each nav item takes full width */
+        margin: 0 auto; /* Centers the items and removes any side margins */
+        text-align: center; /* Ensures text within the nav items is centered */
+    }
+    
+    button {
+        width: 100%; /* Full width for easier access on touch devices */
+        margin: 10px 0px; /* Adjusted margin for vertical stacking */
+        max-width: 100%; 
+        display: block;
+    }
+}

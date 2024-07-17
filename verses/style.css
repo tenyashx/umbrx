@@ -1,0 +1,196 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', sans-serif;
+    background-color: #DBDBDB; /* Dark background for contrast */
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.image-column {
+    display: flex; /* Aligns children (images) in a row */
+    justify-content: center; /* Centers images horizontally */
+    align-items: center; /* Aligns images vertically */
+    gap: 20px; /* Adds space between images */
+    padding-top: 0px; /* Adjust padding if needed */
+    width: 100%; /* Full width of the container */
+    padding-bottom: 20px;
+}
+
+.image-column img {
+    height: 400px; /* Fixed height for all images */
+    width: auto; /* Auto width to maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers the defined area, might crop if necessary */
+    max-width: 100%; /* Ensures image does not overflow its container */
+}
+
+
+.verses-wrapper {
+    text-align: center;
+    width: 90%; /* Optimal reading width */
+    margin: auto;
+}
+
+h1 {
+    color: #fc28a7; /* Pink for emphasis */
+    margin-bottom: 20px;
+}
+
+.verses-container {
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid #fc28a7;
+    text-align: justify; /* Align the verses text to left */
+}
+
+.verse-number {
+    font-weight: bold;
+    color: #fc28a7; 
+    font-size: 20px;
+}
+
+.verse-title{
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+}
+
+p {
+    margin-bottom: 20px; /* Space between verses */
+    font-size: 16px;
+}
+
+.verse-banner {
+    width: 100%; /* Full width to span across both columns */
+    height: 2px; /* Height of the pink banner */
+    background-color: #fc28a7; /* Pink color */
+    order: 3; /* Ensures it appears below both columns */
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: transparent;
+    color: black;
+    border: solid;
+    border-color: #fc28a7;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'Lora';
+    font-size: 18px;
+    font-style: normal;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    body, html {
+        margin: 0; /* No margin to maximize available space */
+        padding: 0; /* No padding at the outermost level to fit content within the viewport */
+        overflow-x: hidden; /* Prevents horizontal scrolling */
+    }
+    .image-column {
+        flex-direction: column; /* Stack images vertically */
+        gap: 20px; /* Reduce gap */
+    }
+    
+    .image-column img {
+        height: 250px; /* Reduce height for smaller screens */
+        width: auto; /* Auto width to maintain aspect ratio */
+        object-fit: cover; /* Ensures the image covers the defined area, might crop if necessary */
+        max-width: 100%; /* Ensures image does not overflow its container */
+    }
+    
+    .verses-wrapper, .verses-container {
+        width: 90%; /* Increase width for full screen use */
+        padding: 15px; /* Reduce padding */
+    }
+    
+    h1, .verse-number, .verse-title {
+        font-size: 18px; /* Slightly reduce font size */
+    }
+    
+    p {
+        font-size: 14px; /* Reduce paragraph font size */
+    }
+    
+    .rules-banner, .verse-banner {
+        height: 1px; /* Reduce the height of the banner */
+    }
+}
+
+@media (max-width: 820px) {
+    body, html {
+        margin: 0; /* No margin to maximize available space */
+        padding: 0; /* No padding at the outermost level to fit content within the viewport */
+        overflow-x: hidden; /* Prevents horizontal scrolling */
+    }
+    .image-column {
+        flex-direction: column; /* Stack images vertically */
+        gap: 20px; /* Reduce gap */
+    }
+    
+    .image-column img {
+        height: 250px; /* Reduce height for smaller screens */
+        width: auto; /* Auto width to maintain aspect ratio */
+        object-fit: cover; /* Ensures the image covers the defined area, might crop if necessary */
+        max-width: 100%; /* Ensures image does not overflow its container */
+    }
+    
+    .verses-wrapper, .verses-container {
+        width: 90%; /* Increase width for full screen use */
+        padding: 15px; /* Reduce padding */
+    }
+    
+    h1, .verse-number, .verse-title {
+        font-size: 18px; /* Slightly reduce font size */
+    }
+    
+    p {
+        font-size: 16px; /* Reduce paragraph font size */
+    }
+    
+    .rules-banner, .verse-banner {
+        height: 1px; /* Reduce the height of the banner */
+    }
+}
+
+@media (max-width: 1024px) {
+    body, html {
+        margin: 0; /* No margin to maximize available space */
+        padding: 0; /* No padding at the outermost level to fit content within the viewport */
+        overflow-x: hidden; /* Prevents horizontal scrolling */
+    }
+    .image-column {
+        flex-direction: column; /* Stack images vertically */
+        gap: 20px; /* Reduce gap */
+    }
+    
+    .image-column img {
+        height: 250px; /* Reduce height for smaller screens */
+        width: auto; /* Auto width to maintain aspect ratio */
+        object-fit: cover; /* Ensures the image covers the defined area, might crop if necessary */
+        max-width: 100%; /* Ensures image does not overflow its container */
+    }
+    
+    .verses-wrapper, .verses-container {
+        width: 90%; /* Increase width for full screen use */
+        padding: 35px; /* Reduce padding */
+    }
+    
+    h1, .verse-number, .verse-title {
+        font-size: 18px; /* Slightly reduce font size */
+    }
+    
+    p {
+        font-size: 14px; /* Reduce paragraph font size */
+    }
+    
+    .rules-banner, .verse-banner {
+        height: 1px; /* Reduce the height of the banner */
+    }
+}

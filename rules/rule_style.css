@@ -1,0 +1,75 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', sans-serif;
+    background-color: #DBDBDB; /* Dark background for contrast */
+    color: black;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rules-wrapper {
+    text-align: center;
+    width: 80%; /* Optimal reading width */
+    margin: auto;
+}
+
+h1 {
+    color: #fc28a7; /* Pink for emphasis */
+    margin-bottom: 20px;
+}
+
+.rules-grid {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    border-width: 1px;
+    border-style: solid;
+    border-color: #fc28a7;
+}
+
+.rules-column {
+    width: 48%; /* Each column takes almost half of the grid */
+    text-align: justify;
+}
+
+.rule-number {
+    font-weight: bold;
+    color: #fc28a7; 
+}
+
+p {
+    margin-bottom: 20px; /* Space between paragraphs */
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .rules-grid {
+        flex-direction: column; /* Stack columns vertically on smaller screens */
+    }
+    .rules-column {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px;
+    }
+}
+
+button {
+    background-color: transparent;
+    color: black;
+    border: solid;
+    border-color: #fc28a7;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'Lora';
+    font-size: 18px;
+    font-style: italic;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
