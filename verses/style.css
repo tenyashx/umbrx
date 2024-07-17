@@ -90,74 +90,80 @@ button {
 @media (max-width: 768px) {
     body, html {
         margin: 0; /* No margin to maximize available space */
-        padding: 0; /* No padding at the outermost level to fit content within the viewport */
+        padding: 10px; /* Slight padding around the content */
         overflow-x: hidden; /* Prevents horizontal scrolling */
     }
+
     .image-column {
         flex-direction: column; /* Stack images vertically */
-        gap: 20px; /* Reduce gap */
+        gap: 10px; /* Reduced gap between images */
     }
-    
+
     .image-column img {
-        height: 250px; /* Reduce height for smaller screens */
-        width: auto; /* Auto width to maintain aspect ratio */
-        object-fit: cover; /* Ensures the image covers the defined area, might crop if necessary */
-        max-width: 100%; /* Ensures image does not overflow its container */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 200px; /* Maximum height for images */
+        width: 100%; /* Full width to fit the container */
+        object-fit: contain; /* Ensures the image is fully visible without cropping */
     }
-    
+
     .verses-wrapper, .verses-container {
-        width: 90%; /* Increase width for full screen use */
-        padding: 15px; /* Reduce padding */
+        width: 100%; /* Full width to use available screen space */
+        padding: 10px; /* Consistent padding */
     }
-    
+
     h1, .verse-number, .verse-title {
-        font-size: 18px; /* Slightly reduce font size */
+        font-size: 16px; /* Adjusted font size for headings */
     }
-    
+
     p {
-        font-size: 14px; /* Reduce paragraph font size */
+        font-size: 14px; /* Smaller font size for text for better readability */
     }
-    
-    .rules-banner, .verse-banner {
-        height: 1px; /* Reduce the height of the banner */
+
+    .verse-banner {
+        height: 1px; /* Thinner banner for a subtle divider */
+        margin-bottom: 10px; /* Reduced margin below the banner */
     }
 }
+
 
 @media (max-width: 820px) {
     body, html {
         margin: 0; /* No margin to maximize available space */
-        padding: 0; /* No padding at the outermost level to fit content within the viewport */
+        padding: 10px; /* Slight padding around the content */
         overflow-x: hidden; /* Prevents horizontal scrolling */
     }
+
     .image-column {
         flex-direction: column; /* Stack images vertically */
-        gap: 20px; /* Reduce gap */
+        gap: 10px; /* Reduced gap between images */
     }
-    
+
     .image-column img {
-        height: 250px; /* Reduce height for smaller screens */
-        width: auto; /* Auto width to maintain aspect ratio */
-        object-fit: cover; /* Ensures the image covers the defined area, might crop if necessary */
-        max-width: 100%; /* Ensures image does not overflow its container */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 200px; /* Maximum height for images */
+        width: 100%; /* Full width to fit the container */
+        object-fit: contain; /* Ensures the image is fully visible without cropping */
     }
-    
+
     .verses-wrapper, .verses-container {
-        width: 90%; /* Increase width for full screen use */
-        padding: 15px; /* Reduce padding */
+        width: 100%; /* Full width to use available screen space */
+        padding: 20px; /* Consistent padding */
     }
-    
+
     h1, .verse-number, .verse-title {
-        font-size: 18px; /* Slightly reduce font size */
+        font-size: 16px; /* Adjusted font size for headings */
     }
-    
+
     p {
-        font-size: 16px; /* Reduce paragraph font size */
+        font-size: 14px; /* Smaller font size for text for better readability */
     }
-    
-    .rules-banner, .verse-banner {
-        height: 1px; /* Reduce the height of the banner */
+
+    .verse-banner {
+        height: 1px; /* Thinner banner for a subtle divider */
+        margin-bottom: 10px; /* Reduced margin below the banner */
     }
 }
+
 
 @media (max-width: 1024px) {
     body, html {
@@ -179,7 +185,7 @@ button {
     
     .verses-wrapper, .verses-container {
         width: 90%; /* Increase width for full screen use */
-        padding: 35px; /* Reduce padding */
+        padding: 15px; /* Reduce padding */
     }
     
     h1, .verse-number, .verse-title {
